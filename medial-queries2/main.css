@@ -1,3 +1,76 @@
 body {
   background: papayawhip;
+height: 100vh;
+  padding: 1rem;
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  height: 100%;
+  grid-template-areas: 
+    "header header header header"
+    "areaB areaB areaB areaF"
+    "areaC areaD areaE areaF";
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1vw
+}
+
+.a, .b, .c, .d, .e, .f {
+  border: 1px solid black;
+}
+
+.a {
+  grid-area: header;
+  min-height: 20%;
+
+}
+
+.b {
+  grid-area: areaB;
+}
+
+.c {
+  grid-area: areaC;
+  
+  
+}
+
+.d {
+  grid-area: areaD;
+}
+
+.e {
+  grid-area: areaE;
+}
+
+.f {
+  grid-area: areaF;
+}
+
+@media (max-width: 510px) {
+  .container {
+    display: flex;
+    width:100%;
+    height:100%;
+    flex-wrap: wrap;
+    gap: 1 rem;
+  }
+
+  .a, .b, .f {
+    width: 100%;
+  }
+
+  .a, .c, .d, .e, .f {
+    height: 20vh;
+  }
+
+  .b {
+    height: 40vh;
+  }
+
+  .c, .d, .e {
+    flex-grow: 1;
+  }
 }
