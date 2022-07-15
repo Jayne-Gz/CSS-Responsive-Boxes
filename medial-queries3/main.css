@@ -1,3 +1,94 @@
 body {
   background: peachpuff;
+  body {
+  background: peachpuff;
+  height: 100vh;
+  padding: 1rem;
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  height: 100%;
+  grid-template-areas: 
+    "header header header header"
+    "areaB areaC areaD areaH"
+    "areaE areaF areaG areaH";
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1vw
+}
+
+.a, .b, .c, .d, .e, .f, .g, .h {
+  border: 1px solid black;
+}
+
+.a {
+  grid-area: header;
+  min-height: 20%;
+
+}
+
+.b {
+  grid-area: areaB;
+}
+
+.c {
+  grid-area: areaC;
+  
+  
+}
+
+.d {
+  grid-area: areaD;
+}
+
+.e {
+  grid-area: areaE;
+}
+
+.f {
+  grid-area: areaF;
+}
+
+.g {
+  grid-area: areaG;
+}
+
+.h {
+  grid-area: areaH;
+}
+
+@media (max-width: 600px) {
+  .container {
+    display: flex;
+    width:100%;
+    height:100%;
+    flex-wrap: wrap;
+    gap: 1 rem;
+  }
+
+  .a, .h {
+    width: 100%;
+  }
+
+  .a {
+    height: 25vh;
+  }
+
+  .a, .b, .c, .d, .e, .f, .g {
+    height: 15%;
+  }
+
+  .h {
+    height: 50vh;
+  }
+
+  .a, .b, .c, .d, .e, .f, .g {
+    flex-grow: 1;
+  }
+
+  .b, .c, .d, .e, .f, .g {
+    width: 30%;
+  }
 }
